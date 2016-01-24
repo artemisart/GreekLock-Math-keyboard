@@ -36,6 +36,14 @@ SetWorkingDir %A_ScriptDir%
  t::Send θ ; theta
 !t::Send ϑ
 +t::Send Θ
+t & h::
+if GetKeyState("Alt")
+	Send ϑ
+else if GetKeyState("Shift")
+	Send Θ
+else
+	Send θ
+return
 
  i::Send ι ; iota
 +i::Send Ι
@@ -62,6 +70,14 @@ SetWorkingDir %A_ScriptDir%
  p::Send π ; pi
 !p::Send ϖ
 +p::Send Π
+p & i::
+if GetKeyState("Alt")
+	Send ϖ
+else if GetKeyState("Shift")
+	Send Π
+else
+	Send π
+return
 
  r::Send ρ ; rho
 !r::Send ϱ
